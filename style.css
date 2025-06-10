@@ -1,61 +1,67 @@
 body {
-    background-color: antiquewhite;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    border: 1px dashed blue;
-    border-radius: 20px;
-    margin: 50px;
-  }
-  
-  .game-area {
-    width: 80%;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 5px;
-  }
-  
-  #game-info {
-    background-color: burlywood;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  }
-  
-  #controls {
-    background-color: darkgrey;
-  }
-  
-  #game-container {
-    background-color: gainsboro;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .tube {
-    width: 50px;
-    height: 200px;
-    border: 2px solid black;
-    border-top: 0px;
-    border-radius: 0 0 10px 10px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column-reverse;
-    overflow: hidden;
-    margin-top: 20px;
-  }
-  
-  .water {
-    width: 100%;
-  }
-  
-  .tube.selected {
-    border-color: "red";
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-    transform: translateY(-20px);
-  }
-  
+  background-color: antiquewhite; /* 背景色 */
+  font-family: Arial, Helvetica, sans-serif; /* 主要字型 */
+  display: flex; /* 使用 flex 排版 */
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 水平置中 */
+  justify-content: flex-start; /* 從上方開始排列 */
+  height: 100vh; /* 高度佔滿整個視窗 */
+  border: 1px dashed blue; /* 外框虛線 */
+  border-radius: 20px; /* 圓角外框 */
+  margin: 50px; /* 外距 */
+}
+
+/* 遊戲區域通用樣式 */
+.game-area {
+  width: 80%; /* 寬度佔 80% */
+  border-radius: 10px; /* 圓角 */
+  padding: 20px; /* 內距 */
+  margin: 5px; /* 外距 */
+}
+
+/* 遊戲資訊區塊樣式 */
+#game-info {
+  background-color: burlywood; /* 背景色 */
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; /* 特殊字型 */
+}
+
+/* 控制區塊樣式 */
+#controls {
+  background-color: darkgrey; /* 背景色 */
+}
+
+/* 遊戲主容器樣式，放置所有試管 */
+#game-container {
+  background-color: gainsboro; /* 背景色 */
+  display: flex; /* 使用 flex 排版 */
+  flex-wrap: wrap; /* 換行排列 */
+  justify-content: center; /* 水平置中 */
+  margin-bottom: 20px; /* 下方外距 */
+}
+
+/* 單一試管樣式 */
+.tube {
+  width: 50px; /* 試管寬度 */
+  height: 200px; /* 試管高度 */
+  border: 2px solid black; /* 黑色邊框 */
+  border-top: 0px; /* 上方無邊框 */
+  border-radius: 0 0 10px 10px; /* 下方圓角 */
+  margin: 10px; /* 外距 */
+  display: flex; /* 使用 flex 排版 */
+  flex-direction: column-reverse; /* 內容從下往上排列 */
+  overflow: hidden; /* 超出隱藏 */
+  margin-top: 20px; /* 上方外距 */
+}
+
+/* 水的樣式，會依顏色變化 */
+.water {
+  width: 100%; /* 寬度填滿試管 */
+}
+
+/* 被選取的試管樣式 */
+.tube.selected {
+  border-color: red; /* 邊框顏色（注意：應去除引號） */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* 紅色陰影 */
+  transform: translateY(-20px); /* 向上移動，突出顯示 */
+}
