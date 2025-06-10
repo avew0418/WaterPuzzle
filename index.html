@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- 設定文件編碼為 UTF-8，支援多國語言字元 -->
     <meta charset="UTF-8" />
+    <!-- 設定響應式網頁，適應不同裝置寬度 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 網頁標題 -->
     <title>Water Puzzle</title>
+    <!-- 引入外部 CSS 樣式表 -->
     <link rel="stylesheet" href="style.css" />
+    <!-- 引入遊戲主程式 JavaScript 檔案 -->
     <script src="waterpuzzle.js"></script>
   </head>
   <body>
+    <!-- 遊戲標題 -->
     <h1>2025 Water Puzzle Game</h1>
+    <!-- 顯示遊戲資訊的區塊 -->
     <div id="game-info" class="game-area">
+      <!-- 顯示目前關卡 -->
       <p>關卡：<span id="level-count">1</span></p>
+      <!-- 顯示已完成的試管數量 -->
       <p>完成的試管：<span id="completed-tubes-count">0</span></p>
     </div>
+    <!-- 控制區塊：選擇關卡與開始遊戲 -->
     <div id="controls" class="game-area">
+      <!-- 關卡選擇標籤 -->
       <label for="level-select">選擇關卡</label>
+      <!-- 關卡選擇下拉選單 -->
       <select id="level-select">
+        <!-- 每個 option 代表一個關卡 -->
         <option value="1">Level 1</option>
         <option value="2">Level 2</option>
         <option value="3">Level 3</option>
@@ -27,8 +40,10 @@
         <option value="9">Level 9</option>
         <option value="10">Level 10</option>
       </select>
+      <!-- 開始遊戲按鈕 -->
       <button id="play-button">PLAY</button>
     </div>
+    <!-- 遊戲主畫面容器，動態產生遊戲內容 -->
     <div id="game-container" class="game-area"></div>
   </body>
 </html>
